@@ -1,4 +1,44 @@
 function createButton(
+  canvas,
+  fn,
+  x,
+  y,
+  width,
+  height,
+  text,
+  bgColor = "lightblue",
+  bgImage = null,
+  textColor = "black",
+) {
+  // const a = handleButtonClick()
+  const handleFunction = (event) => handleButtonClick({ x, y, width, height }, event, fn)
+
+  canvas.addEventListener("click", handleFunction);
+
+  function draw() {
+    drawButton(
+      x,
+      y,
+      width,
+      height,
+      text,
+      (bgColor = "lightblue"),
+      (bgImage = null),
+      (textColor = "black")
+    );
+  }
+
+  function removeButton() {
+    canvas.removeEventListener("click", handleFunction);
+  }
+
+  return {
+    draw,
+    removeButton,
+  };
+}
+
+function drawButton(
   x,
   y,
   width,
@@ -36,7 +76,7 @@ function drawButtonText(x, y, width, height, text, textColor) {
   ctx.fillText(text, x + width / 2, y + height / 2);
 }
 
-function handleButtonClick(button, event, page) {
+function handleButtonClick(button, event, callback) {
   const rect = canvas.getBoundingClientRect();
   const mouseX = event.clientX - rect.left;
   const mouseY = event.clientY - rect.top;
@@ -47,7 +87,7 @@ function handleButtonClick(button, event, page) {
     mouseY >= button.y &&
     mouseY <= button.y + button.height
   ) {
-    console.log(`loadPage called with ${page}`)
-    loadPage(page);
+    // console.log(`loadPage called with ${page}`);
+    callback();
   }
 }
