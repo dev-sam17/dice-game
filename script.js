@@ -28,12 +28,6 @@ video.addEventListener("play", function () {
   drawFrame(); // Start drawing the video to the canvas
 });
 
-// function loadSelectionEventListeners() {
-//   canvas.removeEventListener("click", handlePlayNowButton);
-// }
-
-function loadPage2EventListeners() {}
-
 function loadPage(page) {
   switch (page) {
     case "page1": {
@@ -41,33 +35,26 @@ function loadPage(page) {
       const { draw, remove } = page1MainFunction();
       drawFunction = draw;
       globalremove = remove;
-      // loadPage1EventListeners();
       break;
     }
     case "selectionPage": {
       globalremove();
       const { draw, remove } = drawSelectionPage();
       drawFunction = draw;
-      // loadSelectionEventListeners();
       globalremove = remove
       break;
     }
-    case "page2": {
+    case "createRoomPage": {
       globalremove();
-      drawFunction = drawPage2;
-      loadPage2EventListeners();
-      // gameStarted = true;
-
-      loadGame();
+      const { draw, remove } = drawCreateRoomPage();
+      drawFunction = draw;
+      globalremove = remove
       break;
     }
   }
 }
 
 function page1MainFunction() {
-  // ctx.drawImage(video, 0, 0, cw, ch);
-  // ctx.drawImage(buttonImage, button.x, button.y, button.width, button.height);
-  // createButton(...Object.values(playNowButton), "Play Now");
 
   const playNowButton = {
     x: cw - 100,
@@ -76,31 +63,10 @@ function page1MainFunction() {
     height: 40,
   };
 
-  // function loadPage1EventListeners() {
-  //   // canvas.removeEventListener("click", handleRollDice);
-
-  //   canvas.addEventListener("click", handlePlayNowButton);
-  // }
-
   function handlePlayNowButton() {
     loadPage("selectionPage");
 
-    // {
-    //   const rect = canvas.getBoundingClientRect();
-    //   const mouseX = event.clientX - rect.left;
-    //   const mouseY = event.clientY - rect.top;
-
-    //   // Check if the "Play Now" button is clicked
-    //   if (
-    //     mouseX >= playNowButton.x &&
-    //     mouseX <= playNowButton.x + playNowButton.width &&
-    //     mouseY >= playNowButton.y &&
-    //     mouseY <= playNowButton.y + playNowButton.height
-    //   ) {
-    //     console.log("play now clicked");
-    //     loadPage("selectionPage");
-    //   }
-    // }
+   
   }
 
   const button1 = createButton(canvas, handlePlayNowButton, ...Object.values(playNowButton), "Play Now");
@@ -140,7 +106,7 @@ function drawSelectionPage() {
   }
 
   function handleCreateRoom() {
-    // loadPage("createRoom")
+    loadPage("createRoomPage")
   }
 
   function handleJoinRoom() {
@@ -165,40 +131,56 @@ function drawSelectionPage() {
   return { draw, remove}
 }
 
-function drawPage2() {
-  // loadPage2EventListeners();
+function drawCreateRoomPage() {
+  const createRoomPageBg = new Image();
+  createRoomPageBg.src = "./images/background/createRoomBg.jpeg";
+  const roundsOne = {
+    x: 100,
+    y: 250, 
+    width: 80,
+    height: 40, 
+  };
+
+  const roundsThree = {
+    x: 200,
+    y: 250,
+    width: 80,
+    height: 40,
+  };
+
+  const roundsFive = {
+    x: 300,
+    y: 250,
+    width: 80,
+    height: 40,
+  };
+
+  function handleRounds(rounds) {
+    //
+  }
+
+  const rounds1 = createButton(canvas, () => handleRounds(1), ...Object.values(roundsOne), "One Round")
+
+  const rounds3 = createButton(canvas, () => handleRounds(3), ...Object.values(roundsThree), "Three Rounds")
+
+  const rounds5 = createButton(canvas, () => handleRounds(5), ...Object.values(roundsFive), "Five Rounds")
+
+  function draw() {
+    ctx.drawImage(createRoomPageBg, 0, 0, cw, ch)
+    rounds1.draw();
+    rounds3.draw();
+    rounds5.draw();
+  }
+
+  function remove() {
+    rounds1.remove();
+    rounds3.remove();
+    rounds5.remove();
+  }
+  
+  return { draw, remove }
 }
 
-// function handleCreateRoom(event) {
-//   const rect = canvas.getBoundingClientRect();
-//   const mouseX = event.clientX - rect.left;
-//   const mouseY = event.clientY - rect.top;
 
-//   // Check if the "Roll Dice" button is clicked after the game has started
-//   if (
-//     // mouseX >=  &&
-//     mouseX <= rollButton.x + rollButton.width &&
-//     mouseY >= rollButton.y &&
-//     mouseY <= rollButton.y + rollButton.height
-//   ) {
-//     // rollDice();
-//   }
-// }
-
-// function handleJoinRoom(event) {
-//   const rect = canvas.getBoundingClientRect();
-//   const mouseX = event.clientX - rect.left;
-//   const mouseY = event.clientY - rect.top;
-
-//   // Check if the "Roll Dice" button is clicked after the game has started
-//   if (
-//     mouseX >= rollButton.x &&
-//     mouseX <= rollButton.x + rollButton.width &&
-//     mouseY >= rollButton.y &&
-//     mouseY <= rollButton.y + rollButton.height
-//   ) {
-//     // rollDice();
-//   }
-// }
 
 loadPage("page1");

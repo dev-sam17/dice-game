@@ -70,7 +70,7 @@ function drawButton(
 // Function to draw the button text
 function drawButtonText(x, y, width, height, text, textColor) {
   ctx.fillStyle = textColor;
-  ctx.font = "20px Arial";
+  ctx.font = "15px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.fillText(text, x + width / 2, y + height / 2);
