@@ -5,12 +5,7 @@ const video = document.getElementById("myVideo");
 const cw = canvas.width;
 const ch = canvas.height;
 
-// const rollButtonImage = new Image();
-// rollButtonImage.src = "button-image.png"; // Path to your "Roll Dice" button image
 
-
-
-// let gameStarted = false;
 let drawFunction = () => {};
 let globalremove = () => {};
 
@@ -21,11 +16,10 @@ video.addEventListener("play", function () {
     }
 
     if (!video.paused && !video.ended) {
-      // Draw the video frame onto the canvas
-      requestAnimationFrame(drawFrame); // Schedule the next frame
+      requestAnimationFrame(drawFrame);
     }
   }
-  drawFrame(); // Start drawing the video to the canvas
+  drawFrame(); 
 });
 
 function loadPage(page) {
@@ -74,15 +68,11 @@ function page1MainFunction() {
   function draw() {
     ctx.drawImage(video, 0, 0, cw, ch);
     button1.draw();
-    // drawButton(...Object.values(playNowButton), "Play Now");
   }
 
   function remove() {
-    // canvas.removeEventListener("click", handlePlayNowButton);
     button1.removeButton()
   }
-
-  // loadPage1EventListeners();
 
   return { draw, remove };
 }
@@ -110,7 +100,7 @@ function drawSelectionPage() {
   }
 
   function handleJoinRoom() {
-    // loadPage("createRoom")
+    // loadPage("JoinRoom")
   }
 
   const createRoomBtn = createButton(canvas, handleCreateRoom, ...Object.values(createRoomButton), "Create Room")
@@ -135,23 +125,23 @@ function drawCreateRoomPage() {
   const createRoomPageBg = new Image();
   createRoomPageBg.src = "./images/background/createRoomBg.jpeg";
   const roundsOne = {
-    x: 100,
+    x: 75,
     y: 250, 
-    width: 80,
+    width: 100,
     height: 40, 
   };
 
   const roundsThree = {
     x: 200,
     y: 250,
-    width: 80,
+    width: 100,
     height: 40,
   };
 
   const roundsFive = {
-    x: 300,
+    x: 350,
     y: 250,
-    width: 80,
+    width: 100,
     height: 40,
   };
 
