@@ -1,0 +1,10 @@
+.rooms {
+  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  .room-button {
+    padding: 10px 50px;
+  }
+}

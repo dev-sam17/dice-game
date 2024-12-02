@@ -1,0 +1,41 @@
+.enter-roomId {
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-weight: 700;
+    text-transform: capitalize;
+    -webkit-text-stroke: 2px black;
+  }
+
+  input {
+    width: 40%;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px whitesmoke solid;
+    background-color: rgba(0, 0, 0, 0.74);
+  }
+
+  button {
+    width: 20%;
+    margin: auto;
+  }
+}
+
+.available-rooms {
+  width: 30%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.74);
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+}

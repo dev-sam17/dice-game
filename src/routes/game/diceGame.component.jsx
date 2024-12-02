@@ -1,9 +1,10 @@
 import { useRef } from "react";
-
-import "../start.css";
-import "./dicegame.css";
+import { useNavigate } from "react-router";
+import "./dicegame.scss";
 
 export const Game = () => {
+  const navigate = useNavigate();
+
   const dice1Ref = useRef(null);
   const dice2Ref = useRef(null);
 
@@ -80,15 +81,15 @@ export const Game = () => {
   }
 
   return (
-    <div className="background-video-container2">
+    <div className="background-video-container">
       <video autoPlay muted loop className="background-video">
         <source
-          src="/public/istockphoto-1124809881-640_adpp_is.mp4"
+          src="/istockphoto-1124809881-640_adpp_is.mp4"
           type="video/mp4"
         />
       </video>
 
-      <div className="container">
+      <div className="container2">
         <div className="dices">
           <div className="dice dice1" ref={dice1Ref}>
             <div className="face front"></div>
@@ -113,6 +114,9 @@ export const Game = () => {
           Play
         </button>
       </div>
+      <button className="back-button" onClick={() => navigate(-1)}>
+        Back
+      </button>
     </div>
   );
 };
