@@ -23,7 +23,10 @@
 .showRoomId {
   background-color: rgba(0, 0, 0, 0.74);
   margin: auto;
-  width: 40%;
+  width: 30%;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 10px;
 
   .roomId {
     font-weight: 500;
@@ -31,16 +34,21 @@
   }
 
   .copyButton {
-    background-image: none;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.74);
     border: none;
     padding: 0;
     cursor: pointer;
-    color: black;
+    color: white;
     box-shadow: none;
 
-    &:hover {
-      background-image: none;
-      background-color: black;
+    // &:hover {
+    //   background-image: none;
+    //   background-color: none;
+    // }
+
+    &:active {
+      border: none;
     }
   }
 }
