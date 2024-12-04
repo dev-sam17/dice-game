@@ -2,9 +2,10 @@
   margin-top: 30vh;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 
   .room-button {
-    padding: 10px 50px;
+    padding: 20px 50px;
+    transform: scale(1.4);
   }
 }

@@ -14,11 +14,7 @@ export const Rooms = () => {
   };
 
   return (
-    <div className="background-video-container">
-      <video autoPlay loop muted className="background-video">
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <>
       <div className="rooms">
         <button className="room-button" onClick={handleCreateRoom}>
           Create Room
@@ -30,6 +26,6 @@ export const Rooms = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         Back
       </button>
-    </div>
+    </>
   );
 };
