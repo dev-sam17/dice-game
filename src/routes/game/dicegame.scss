@@ -8,7 +8,7 @@
   height: 40vh;
   // padding: 60px 0 40px;
   border-radius: 30px;
-  background: #323232d2;
+  background-color: rgb(248, 248, 248);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   scale: 1.2;
 
@@ -60,7 +60,11 @@
         border: 5px solid rgba(255, 255, 255, 0.3);
         transform-style: preserve-3d;
         // background: linear-gradient(145deg, #dddbd8, #fff);
-        background: linear-gradient(145deg, #e3ffe7 0%, #d9e7ff 100%);
+        background: linear-gradient(
+          145deg,
+          rgb(0, 0, 0) 11.2%,
+          rgb(11, 132, 145) 91.1%
+        );
 
         &::before {
           position: absolute;

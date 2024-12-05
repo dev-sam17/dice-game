@@ -2,10 +2,45 @@
   margin-top: 30vh;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  column-gap: 100px;
+  row-gap: 25px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
 
   .room-button {
     padding: 20px 50px;
     transform: scale(1.4);
+
+    // Media queries for responsiveness
+    @media screen and (max-width: 1200px) {
+      // Large screens
+      transform: scale(1.4);
+      column-gap: 300px;
+    }
+
+    @media screen and (max-width: 992px) {
+      // Medium screens (tablets)
+      transform: scale(1.1);
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      // Small screens
+      transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 576px) {
+      // Extra small screens (phones)
+      transform: scale(1.1);
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 }

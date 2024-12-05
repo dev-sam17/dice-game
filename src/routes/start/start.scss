@@ -119,4 +119,16 @@ button {
   padding: 20px 40px;
   font-size: 20px;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    // Small screens
+    bottom: 80px;
+    transform: scale(0.9);
+  }
+
+  @media screen and (max-width: 576px) {
+    // Extra small screens (phones)
+    bottom: 80px;
+    transform: scale(0.9);
+  }
 }
