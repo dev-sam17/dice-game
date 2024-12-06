@@ -40,27 +40,27 @@ export const JoinRoom = () => {
             <div className="roomList">
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
               <div className="roomInfo">
                 Room 567326723 <span>Rounds: 3</span>
-                <button>Join</button>
+                <button onClick={() => navigate("/game")}>Join</button>
               </div>
             </div>
           )}
