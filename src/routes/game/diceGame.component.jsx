@@ -83,10 +83,7 @@ export const Game = () => {
   return (
     <div className="background-video-container">
       <video autoPlay muted loop className="background-video">
-        <source
-          src="/istockphoto-1124809881-640_adpp_is.mp4"
-          type="video/mp4"
-        />
+        <source src="/gameBg.mp4" type="video/mp4" />
       </video>
 
       <div className="container2">

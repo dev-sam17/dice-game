@@ -12,11 +12,12 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Start />} />
-        <Route path="/rooms" element={<Rooms />} />
+
         <Route path="/joinRoom" element={<JoinRoom />} />
         <Route path="/createRoom" element={<CreateRoom />} />
         <Route path="/game" element={<Game />} />
       </Route>
+      <Route path="/rooms" element={<Rooms />} />
     </Routes>
   );
 };

@@ -1,3 +1,13 @@
+.roomsBg {
+  position: absolute; /* Position the image absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensures the image covers the viewport */
+  z-index: -1;
+}
+
 .rooms {
   margin-top: 30vh;
   display: flex;

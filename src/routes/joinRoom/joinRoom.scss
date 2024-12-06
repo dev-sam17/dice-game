@@ -1,10 +1,12 @@
+
+
 .bg {
   background-color: rgba(248, 248, 248, 0.839);
   width: 50%;
   margin: auto;
   height: 70%;
   border-radius: 20px;
-
+  z-index: 1;
   // Media queries for responsiveness
   @media screen and (max-width: 1200px) {
     // Large screens
@@ -147,7 +149,7 @@
         margin: 0 auto;
         border: 16px solid #f3f3f3;
         border-radius: 50%;
-        border-top: 16px solid #e73f3f;
+        border-top: 16px solid rgb(255, 6, 6);
         width: 50px;
         height: 50px;
         -webkit-animation: spin 2s linear infinite; /* Safari */

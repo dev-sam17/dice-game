@@ -15,6 +15,7 @@ export const Rooms = () => {
 
   return (
     <>
+      <img src="/joinRoomBg.webp" className="roomsBg" alt="" />
       <div className="rooms">
         <button className="room-button" onClick={handleCreateRoom}>
           Create Room
