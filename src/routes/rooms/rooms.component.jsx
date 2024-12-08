@@ -14,8 +14,7 @@ export const Rooms = () => {
   };
 
   return (
-    <>
-      <img src="/joinRoomBg.webp" className="roomsBg" alt="" />
+    <div className="roomsBg">
       <div className="rooms">
         <button className="room-button" onClick={handleCreateRoom}>
           Create Room
@@ -27,6 +26,6 @@ export const Rooms = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         Back
       </button>
-    </>
+    </div>
   );
 };

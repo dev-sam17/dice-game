@@ -22,7 +22,7 @@ export const JoinRoom = () => {
   }, []);
 
   return (
-    <>
+    <div className="joinRoomBg">
       <div className="bg">
         <div className="enter-roomId">
           <h1>Enter Room Id</h1>
@@ -69,6 +69,6 @@ export const JoinRoom = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         Back
       </button>
-    </>
+    </div>
   );
 };

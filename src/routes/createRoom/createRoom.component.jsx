@@ -16,7 +16,7 @@ export const CreateRoom = () => {
   };
 
   return (
-    <>
+    <div className="createRoomBg">
       <div className="bg2">
         <div className="selectRounds">
           <h1>Select Number of Rounds:</h1>
@@ -59,6 +59,6 @@ export const CreateRoom = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         Back
       </button>
-    </>
+    </div>
   );
 };

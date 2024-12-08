@@ -28,22 +28,8 @@ body {
   }
 }
 
-// button {
-//   border: none;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-//   transition: background-image 0.3s ease;
-
-//   &:hover {
-//     background-color: linear-gradient(to top, #330867 0%, #30cfd0 100%);
-//   }
-// }
-
 button {
   appearance: button;
-  // background-color: #1899D6;
   background-color: #e73f3f;
   border: solid transparent;
   border-radius: 16px;
@@ -52,7 +38,6 @@ button {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  // font-family: din-round, sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -70,7 +55,6 @@ button {
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  // width: 100%;
 
   &:after {
     background-clip: padding-box;
@@ -122,20 +106,20 @@ button {
 
   @media screen and (max-width: 768px) {
     // Small screens
-    bottom: 80px;
+    bottom: 40px;
     transform: scale(0.9);
   }
 
   @media screen and (max-width: 576px) {
     // Extra small screens (phones)
-    bottom: 80px;
-    transform: scale(0.9);
+    bottom: 10px;
+    transform: scale(0.8);
   }
 
   @media screen and (max-width: 1200px) and (orientation: landscape) {
     // Large screens
     transform: scale(0.8);
-    bottom: 60px;
+    bottom: 40px;
   }
 
   @media screen and (max-width: 992px) and (orientation: landscape) {

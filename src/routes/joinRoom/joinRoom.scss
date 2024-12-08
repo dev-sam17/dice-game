@@ -1,186 +1,198 @@
+.joinRoomBg {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background: url("/public/joinRoomBg.webp") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
-.bg {
-  background-color: rgba(248, 248, 248, 0.839);
-  width: 50%;
-  margin: auto;
-  height: 70%;
-  border-radius: 20px;
-  z-index: 1;
-  // Media queries for responsiveness
-  @media screen and (max-width: 1200px) {
-    // Large screens
-    width: 80%;
-    height: 50%;
-  }
-
-  @media screen and (max-width: 992px) {
-    // Medium screens (tablets)
-    width: 80%;
-    height: 60%;
-  }
-
-  @media screen and (max-width: 768px) {
-    // Small screens
-    width: 90%;
-    margin-top: 0;
+  .bg {
+    background-color: rgba(248, 248, 248, 0.839);
+    width: 50%;
+    margin: auto;
     height: 70%;
-  }
-
-  @media screen and (max-width: 576px) {
-    // Extra small screens (phones)
-    width: 90%;
-    margin-top: 0;
-    height: 75%;
-  }
-
-  .enter-roomId {
-    margin: 100px auto;
-    text-align: center;
-    display: flex;
-    gap: 15px;
-
-    flex-direction: column;
-    justify-content: center;
-
+    border-radius: 20px;
+    // Media queries for responsiveness
     @media screen and (max-width: 1200px) {
       // Large screens
+      width: 80%;
+      height: 70%;
     }
 
     @media screen and (max-width: 992px) {
       // Medium screens (tablets)
+      width: 80%;
+      height: 60%;
     }
 
     @media screen and (max-width: 768px) {
       // Small screens
-      margin-top: 50px;
+      width: 90%;
+      height: 70%;
     }
 
     @media screen and (max-width: 576px) {
       // Extra small screens (phones)
       width: 90%;
-      margin-top: 50px;
+      height: 75%;
     }
 
-    h1 {
-      font-weight: 700;
-      margin: 0;
-      text-transform: capitalize;
-      color: black;
-      padding: 10px 40px;
-      border-radius: 20px;
-      // -webkit-text-stroke: 2px black;
+    @media screen and (max-width: 376px) {
+      // xx small screens (phones)
+      width: 90%;
+      margin-top: 0;
+      height: 88%;
+      transform: scale(0.9);
+    }
+
+    .enter-roomId {
+      text-align: center;
+      display: flex;
+      gap: 15px;
+
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (max-width: 1200px) {
+        // Large screens
+      }
+
+      @media screen and (max-width: 992px) {
+        // Medium screens (tablets)
+      }
 
       @media screen and (max-width: 768px) {
-        font-size: 35px;
+        // Small screens
+        margin-top: 50px;
       }
 
       @media screen and (max-width: 576px) {
-        font-size: 28px;
+        // Extra small screens (phones)
+        width: 90%;
+        margin-top: 50px;
+      }
+
+      h1 {
+        font-weight: 700;
+        margin: 0;
+        text-transform: capitalize;
+        color: black;
+        padding: 10px 40px;
+        border-radius: 20px;
+        // -webkit-text-stroke: 2px black;
+
+        @media screen and (max-width: 768px) {
+          font-size: 35px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 28px;
+        }
+      }
+
+      input {
+        width: 40%;
+        height: 40px;
+        margin: auto;
+        border-radius: 15px;
+        font-size: 20px;
+        padding: 5px 10px;
+        border: 2px whitesmoke solid;
+        background-color: rgba(0, 0, 0, 0.74);
+
+        @media screen and (max-width: 768px) {
+          width: 60%;
+        }
+
+        @media screen and (max-width: 576px) {
+          width: 60%;
+        }
+      }
+
+      button {
+        width: 30%;
+        margin: auto;
+        transform: scale(1.1);
+
+        @media screen and (max-width: 768px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 576px) {
+          width: 50%;
+        }
       }
     }
 
-    input {
-      width: 40%;
-      height: 40px;
-      margin: auto;
-      border-radius: 15px;
-      font-size: 20px;
-      padding: 5px 10px;
-      border: 2px whitesmoke solid;
+    .available-rooms {
+      width: 50%;
+      height: 36%;
       background-color: rgba(0, 0, 0, 0.74);
+      border-radius: 10px;
+      margin: 5% auto 0;
+      padding: 10px 20px;
+      text-align: center;
+      overflow-y: auto;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       @media screen and (max-width: 768px) {
-        width: 60%;
+        width: 80%;
+        height: 40%;
       }
 
       @media screen and (max-width: 576px) {
-        width: 60%;
-      }
-    }
-
-    button {
-      width: 30%;
-      margin: auto;
-      transform: scale(1.1);
-
-      @media screen and (max-width: 768px) {
-        width: 50%;
+        width: 80%;
+        height: 45%;
       }
 
-      @media screen and (max-width: 576px) {
-        width: 50%;
-      }
-    }
-  }
-
-  .available-rooms {
-    width: 50%;
-    height: 36%;
-    background-color: rgba(0, 0, 0, 0.74);
-    border-radius: 10px;
-    margin: 5% auto 0;
-    padding: 10px 20px;
-    text-align: center;
-    overflow-y: auto;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      width: 80%;
-      height: 40%;
-    }
-
-    @media screen and (max-width: 576px) {
-      width: 80%;
-      height: 45%;
-    }
-
-    .roomList {
-      display: grid;
-      row-gap: 7px;
-      height: 90%;
-
-      .loader {
-        margin: 0 auto;
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid rgb(255, 6, 6);
-        width: 50px;
-        height: 50px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
-        animation: spin 2s linear infinite;
-      }
-
-      /* Safari */
-      @-webkit-keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      .roomInfo {
+      .roomList {
         display: grid;
-        grid-template-columns: 3fr 2fr 1fr;
-        font-weight: 600;
-        button {
-          padding: 2px 5px;
+        row-gap: 7px;
+        height: 90%;
+
+        .loader {
+          margin: 0 auto;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid rgb(255, 6, 6);
+          width: 50px;
+          height: 50px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .roomInfo {
+          display: grid;
+          grid-template-columns: 3fr 2fr 1fr;
+          font-weight: 600;
+          button {
+            padding: 2px 5px;
+          }
         }
       }
     }

@@ -9,8 +9,14 @@ export const Start = () => {
   };
 
   return (
-    <button className="action-button" onClick={handleClick}>
-      Play
-    </button>
+    <div className="background-video-container">
+      <video autoPlay loop muted className="background-video">
+        <source src="/public/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button className="action-button" onClick={handleClick}>
+        Play
+      </button>
+    </div>
   );
 };
