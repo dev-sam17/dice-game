@@ -23,7 +23,7 @@ export const Rooms = () => {
           Join Room
         </button>
       </div>
-      <button className="back-button" onClick={() => navigate(-1)}>
+      <button className="back-button" onClick={() => navigate("/")}>
         Back
       </button>
     </div>
