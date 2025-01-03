@@ -10,12 +10,20 @@ export const Game = () => {
 
   const waitTime = 3000;
 
-  const randomDice = () => {
-    const random1 = Math.floor(Math.random() * 6) + 1; // Random number between 1 and 6
-    const random2 = Math.floor(Math.random() * 6) + 1;
+  const randomDice = async () => {
+    // const random1 = Math.floor(Math.random() * 6) + 1; // Random number between 1 and 6
+    // const random2 = Math.floor(Math.random() * 6) + 1;
 
-    rollDice1(random1);
-    rollDice2(random2);
+    const response = await fetch(
+      "http://localhost:3000/api/v1/generate-numbers"
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const result = await response.json();
+    console.log(result);
+    rollDice1(result.number1);
+    rollDice2(result.number2);
   };
 
   const generateRandomRotation = () => {
@@ -23,7 +31,7 @@ export const Game = () => {
       x: Math.floor(Math.random() * 3600) + 3600, // Random rotation on X-axis
       y: Math.floor(Math.random() * 3600) + 3600, // Random rotation on Y-axis
     };
-    console.log("gen", ans);
+    // console.log("gen", ans);
     return ans;
   };
 
