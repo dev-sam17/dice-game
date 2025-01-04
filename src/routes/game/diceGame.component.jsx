@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router";
 import "./dicegame.scss";
+import { BASEPATH } from "../../App";
 
 export const Game = () => {
   const navigate = useNavigate();
@@ -91,7 +92,7 @@ export const Game = () => {
   return (
     <div className="background-video-container">
       <video autoPlay muted loop className="background-video">
-        <source src="/gameBg.mp4" type="video/mp4" />
+        <source src={`${BASEPATH}/gameBg.mp4`} type="video/mp4" />
       </video>
 
       <div className="container2">

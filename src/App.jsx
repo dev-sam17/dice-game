@@ -17,6 +17,6 @@ const App = () => {
     </Routes>
   );
 };
-``;
 
+export const BASEPATH = "/react";
 export default App;
