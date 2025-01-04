@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   build: {
-    outDir: '../public/react'
+    outDir: '../node-server-fe/public/react'
   },
   base: '/react/'
 })
